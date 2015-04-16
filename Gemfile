@@ -1,23 +1,20 @@
 source 'https://rubygems.org'
 ruby '2.2.2'
 gem 'rails', '4.2.1'
-gem 'sass-rails', '~> 5.0'
-gem 'uglifier', '>= 1.3.0'
-gem 'coffee-rails', '~> 4.1.0'
-gem 'jquery-rails'
-gem 'turbolinks'
-gem 'jbuilder', '~> 2.0'
-group :development, :test do
-  gem 'byebug'
-  gem 'web-console', '~> 2.0'
-  gem 'spring'
-end
+
+gem 'coffee-rails'
 gem 'decent_exposure'
+gem 'jbuilder'
+gem 'jquery-rails'
 gem 'pg'
+gem 'sass-rails'
 gem 'sendgrid'
 gem 'simple_form'
 gem 'slim-rails'
 gem 'thin'
+gem 'turbolinks'
+gem 'uglifier'
+
 group :development do
   gem 'better_errors'
   gem 'guard-bundler'
@@ -25,22 +22,28 @@ group :development do
   gem 'guard-rspec'
   gem 'quiet_assets'
   gem 'rails_layout'
-  gem 'rb-fchange', :require=>false
-  gem 'rb-fsevent', :require=>false
-  gem 'rb-inotify', :require=>false
+  gem 'rb-fchange', require: false
+  gem 'rb-fsevent', require: false
+  gem 'rb-inotify', require: false
   gem 'spring-commands-rspec'
 end
+
 group :development, :test do
+  gem 'byebug'
   gem 'factory_girl_rails'
   gem 'faker'
+  gem 'guard-rubocop'
   gem 'pry-rails'
   gem 'pry-rescue'
   gem 'rspec-rails'
-  gem 'rubocop'
+  gem 'spring'
+  gem 'web-console', '~> 2.0'
 end
+
 group :production do
   gem 'rails_12factor'
 end
+
 group :test do
   gem 'capybara'
   gem 'database_cleaner'
