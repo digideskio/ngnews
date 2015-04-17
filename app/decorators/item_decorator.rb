@@ -4,7 +4,6 @@ class ItemDecorator < Draper::Decorator
   delegate :body, to: :item
 
   def display_date
-    from_time = object.is_event? ? object.end_date : object.start_date
     return if from_time.nil?
     "#{distance_of_time_in_words(from_time, Time.zone.today)} ago"
   end
@@ -27,5 +26,11 @@ class ItemDecorator < Draper::Decorator
       office: "ss-warehouse",
       misc: "ss-whale",
     }
+  end
+
+  private
+
+  def from_time
+    from_time = object.is_event? ? object.end_date : object.start_date
   end
 end
