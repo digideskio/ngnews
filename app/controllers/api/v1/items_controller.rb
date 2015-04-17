@@ -26,7 +26,7 @@ module Api
       def item_attrs
         params
           .require(:item)
-          .permit(:body, :source, :category, :category, :sub_category, :start_date, :end_date)
+          .permit(:body, :source, :category, :category, :sub_category, :start_date, :end_date, :is_public)
       end
     end
   end
