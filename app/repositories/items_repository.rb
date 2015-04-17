@@ -4,7 +4,7 @@ class ItemsRepository
   end
 
   def all
-    Item.all.order(start_date: :desc)
+    Item.sort_by_time_desc
   end
 
   def filter_by(cat_names)

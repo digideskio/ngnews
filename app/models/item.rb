@@ -1,4 +1,6 @@
 class Item < ActiveRecord::Base
+  scope :sort_by_time_desc, -> { order(start_date: :desc) }
+
   validates :body, :category, :start_date, presence: true
 
   # rubocop:disable Rails/FindEach
