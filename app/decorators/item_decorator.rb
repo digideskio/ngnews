@@ -4,7 +4,6 @@ class ItemDecorator < Draper::Decorator
   delegate :body, to: :item
 
   def display_date
-    return if from_time.nil?
     "#{distance_of_time_in_words(from_time, Time.zone.today)} ago"
   end
 
