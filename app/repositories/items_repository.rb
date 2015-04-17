@@ -4,4 +4,8 @@ class ItemsRepository
     item.save
     item
   end
+
+  def all
+    Item.all
+  end
 end
