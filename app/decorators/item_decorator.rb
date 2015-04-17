@@ -7,7 +7,8 @@ class ItemDecorator < Draper::Decorator
     if object.is_event?
       "#{start_date} - #{end_date}"
     else
-      "#{distance_of_time_in_words(start_date, Time.zone.today)} ago"
+      return "Today..." if start_date == Date.current
+      "#{time_ago_in_words(start_date)} ago"
     end
   end
 
@@ -29,11 +30,5 @@ class ItemDecorator < Draper::Decorator
       office: "ss-warehouse",
       misc: "ss-whale",
     }
-  end
-
-  private
-
-  def from_time
-    is_event? ? end_date : start_date
   end
 end

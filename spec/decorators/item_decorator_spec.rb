@@ -12,8 +12,20 @@ describe ItemDecorator do
   end
 
   describe "#display_date" do
-    it "displays duration" do
-      expect(subject.display_date).to eq "2 days ago"
+    context 'more than one day ago' do
+      before do
+        allow(subject).to receive(:start_date).and_return(Date.current)
+      end
+
+      it "displays Today..." do
+        expect(subject.display_date).to eq "Today..."
+      end
+    end
+
+    context 'more than one day ago' do
+      it "displays duration" do
+        expect(subject.display_date).to eq "3 days ago"
+      end
     end
 
     context "category:event" do
