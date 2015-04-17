@@ -8,7 +8,7 @@ module Api
       expose(:items_repository) { ItemsRepository.new }
 
       def create
-        item_attrs = params.require(:item).permit(:body, :source, :kind)
+        item_attrs = params.require(:item).permit(:body, :source, :category)
         item = items_repository.add item_attrs
         render json: item
       end

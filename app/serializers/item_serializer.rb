@@ -1,3 +1,3 @@
 class ItemSerializer < ActiveModel::Serializer
-  attributes :id, :kind, :source, :body
+  attributes :id, :category, :source, :body
 end
