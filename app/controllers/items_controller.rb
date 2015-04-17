@@ -22,6 +22,6 @@ class ItemsController < ApplicationController
   def item_attrs
     params
       .require(:item)
-      .permit(:body, :source, :category, :category, :sub_category)
+      .permit(:body, :source, :category, :category, :sub_category, :start_date, :end_date)
   end
 end
