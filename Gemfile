@@ -14,6 +14,7 @@ gem 'simple_form'
 gem 'slim-rails'
 gem 'thin'
 gem 'uglifier'
+gem 'draper'
 
 group :development do
   gem 'better_errors'
