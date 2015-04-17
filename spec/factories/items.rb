@@ -3,6 +3,6 @@ FactoryGirl.define do
     body "MyText"
     kind "MyString"
     source "MyString"
-    public false
+    is_public false
   end
 end
