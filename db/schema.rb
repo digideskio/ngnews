@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20150417093658) do
+ActiveRecord::Schema.define(version: 20150417102335) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -27,13 +27,16 @@ ActiveRecord::Schema.define(version: 20150417093658) do
 
   create_table "items", force: :cascade do |t|
     t.text     "body"
-    t.string   "kind"
+    t.string   "category"
     t.string   "source"
     t.boolean  "public"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.datetime "created_at",   null: false
+    t.datetime "updated_at",   null: false
+    t.date     "start_date"
+    t.date     "end_date"
+    t.string   "sub_category"
   end
 
-  add_index "items", ["kind"], name: "index_items_on_kind", using: :btree
+  add_index "items", ["category"], name: "index_items_on_category", using: :btree
 
 end
