@@ -11,17 +11,13 @@ module Items
 
     def call
       item = items_repository.add attrs
-      ItemCategoryValidator.new(item, items_repository).validate!
+      item.validate!
+      ItemCategoryValidator.new(item, categories_repository).validate!
       if item.errors.empty?
         Response::Success.new(data: item)
       else
         Response::Error.new(errors: item.errors.full_messages)
       end
-    end
-
-    private
-
-    def valid_item_category?(_item)
     end
 
     class ItemCategoryValidator
@@ -39,14 +35,14 @@ module Items
       private
 
       def validate_category!
-        return if categories_repository.include? item.category
+        return true if categories_repository.include? item.category
         item.errors.add :category, "is not allowed"
       end
 
       def validate_sub_category!
-        return if item.sub_category.blank? ||
-                  categories_repository.subcategories_for(category)
-                  .include?(sub_category)
+        return true if item.sub_category.blank? ||
+                       categories_repository.subcategories_for(item.category)
+                       .include?(item.sub_category)
         item.errors.add :sub_category, "is not allowed"
       end
     end
