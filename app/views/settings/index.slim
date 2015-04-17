@@ -1,12 +1,4 @@
 .row
   .container
     h1 ng news settings
-.row
-  .container
-    h2 add new item
-    = simple_form_for item do |f|
-      = f.input :body
-      = f.input :start_date
-      = f.input :end_date
-      = f.input :category, collection: categories
-      = f.submit
+= render template: 'items/new'
