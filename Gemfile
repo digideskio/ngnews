@@ -4,7 +4,6 @@ gem 'rails', '4.2.1'
 
 gem 'coffee-rails'
 gem 'decent_exposure'
-gem 'jbuilder'
 gem 'jquery-rails'
 gem 'pg'
 gem 'sass-rails'
@@ -12,8 +11,9 @@ gem 'sendgrid'
 gem 'simple_form'
 gem 'slim-rails'
 gem 'thin'
-gem 'turbolinks'
 gem 'uglifier'
+gem 'materialize-sass'
+gem 'active_model_serializers'
 
 group :development do
   gem 'better_errors'
