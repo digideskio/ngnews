@@ -1,4 +1,16 @@
 .row
   .container
     h1 ng news settings
+.row
+  .container
+    h2 visible categories
+.row
+  .container
+    = form_tag '#' do
+      - categories.each do |category|
+        p
+          input type='checkbox' id=category checked="checked"
+          label for=category
+            = category
+
 = render template: 'items/new'
