@@ -16,7 +16,7 @@ gem 'slim-rails'
 gem 'thin'
 gem 'uglifier'
 gem 'draper'
-gem 'ngnews-ruby', git: 'https://github.com/Qsmir/ngnews-ruby'
+# gem 'ngnews-ruby', git: 'https://github.com/Qsmir/ngnews-ruby'
 
 group :development do
   gem 'better_errors'
