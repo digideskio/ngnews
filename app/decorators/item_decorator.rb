@@ -1,13 +1,13 @@
 class ItemDecorator < Draper::Decorator
   include ActionView::Helpers::DateHelper
 
-  delegate :body, to: :item
+  delegate :body, :start_date, :end_date, :is_event?, to: :item
 
   def display_date
     if object.is_event?
-      "#{object.start_date} - #{object.end_date}"
+      "#{start_date} - #{end_date}"
     else
-      "#{distance_of_time_in_words(object.start_date, Time.zone.today)} ago"
+      "#{distance_of_time_in_words(start_date, Time.zone.today)} ago"
     end
   end
 
@@ -34,6 +34,6 @@ class ItemDecorator < Draper::Decorator
   private
 
   def from_time
-    from_time = object.is_event? ? object.end_date : object.start_date
+    is_event? ? end_date : start_date
   end
 end
