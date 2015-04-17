@@ -12,6 +12,9 @@ describe ItemDecorator do
   end
 
   describe "#display_date" do
+    before { Timecop.freeze(Time.local(2015, 4, 17)) }
+    after { Timecop.return }
+
     context "start date is equal today date" do
       before do
         allow(subject).to receive(:start_date).and_return(Date.current)
