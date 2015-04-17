@@ -4,13 +4,6 @@
 .row
   .container
     h2 visible categories
-.row
-  .container
-    = form_tag '#' do
-      - categories.each do |category|
-        p
-          input type='checkbox' id=category checked="checked"
-          label for=category
-            = category
+= render partial: 'home/filters'
 
 = render template: 'items/new'
