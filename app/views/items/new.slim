@@ -1,12 +1,12 @@
 .row
   .container
     h2 add new item
-    = simple_form_for item do |f|
-      = f.input :body, wrapper_html: { class: 'input-field'}
-      = f.input :start_date, as: :text, wrapper_html: { class: 'input-field'}
+    = simple_form_for item, defaults: { wrapper_html: { class: 'input-field' } } do |f|
+      = f.input :body, input_html: { class: 'materialize-textarea' }
+      = f.input :start_date, as: :string
 
-      = f.input :end_date, as: :text, wrapper_html: { class: 'input-field'}
+      = f.input :end_date, as: :string
 
-      = f.input :category, collection: categories, wrapper_html: { class: 'input-field'}
+      = f.input :category, collection: categories
 
       = f.submit 'Submit', class: 'waves-effect waves-light btn'
