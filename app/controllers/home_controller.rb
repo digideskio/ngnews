@@ -1,5 +1,5 @@
 class HomeController < ApplicationController
-  expose(:items) { Item.all }
+  expose(:items) { ItemDecorator.decorate_collection(Item.all) }
 
   def index
   end
