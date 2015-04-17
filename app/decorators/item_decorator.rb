@@ -4,7 +4,11 @@ class ItemDecorator < Draper::Decorator
   delegate :body, to: :item
 
   def display_date
-    "#{distance_of_time_in_words(from_time, Time.zone.today)} ago"
+    if object.is_event?
+      "#{object.start_date} - #{object.end_date}"
+    else
+      "#{distance_of_time_in_words(object.start_date, Time.zone.today)} ago"
+    end
   end
 
   def icon_name
