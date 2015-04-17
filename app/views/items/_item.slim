@@ -8,4 +8,6 @@
       .col.s10.item__body
         span.grey-text.text-lighten-2= item.display_date
 
-        p= item.body
+        p
+          markdown:
+            #{{ BlueCloth.new(item.body).to_html }}
