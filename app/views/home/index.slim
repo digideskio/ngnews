@@ -1,6 +1,6 @@
 .row
   .container
+    h1 NG NEWS
     .items
       ul
-        - items.each do |item|
-          li = item.body
+        = render items, partial: 'items/item'
