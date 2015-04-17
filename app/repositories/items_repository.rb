@@ -6,6 +6,6 @@ class ItemsRepository
   end
 
   def all
-    Item.all
+    Item.all.order(start_date: :desc)
   end
 end
