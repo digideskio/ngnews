@@ -1,6 +1,10 @@
-// Place all the styles related to the home controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: http://sass-lang.com/
+$card-text-size: 1.3em;
+$cart-text-line: 1.7em;
+
+.body {
+  @extend .grey-text, .text-darken-3;
+  font-weight: 200;
+}
 
 .header {
   text-align: center;
@@ -9,18 +13,17 @@
     margin: 0 10px;
   }
 }
+
 .items {
+  font-size: $card-text-size;
 
-  ul {
-    @extend .collection;
-
-    li {
-      @extend .collection-item;
-    }
+  .item__body {
+    line-height: $cart-text-line;
   }
-}
-.item-icon {
-  i {
-    font-size: 2em;
+
+  .item__icon {
+    i {
+      font-size: 4em;
+    }
   }
 }
