@@ -12,7 +12,7 @@ describe ItemDecorator do
   end
 
   describe "#display_date" do
-    context 'more than one day ago' do
+    context "start date is equal today date" do
       before do
         allow(subject).to receive(:start_date).and_return(Date.current)
       end
@@ -22,7 +22,7 @@ describe ItemDecorator do
       end
     end
 
-    context 'more than one day ago' do
+    context "more than one day ago" do
       it "displays duration" do
         expect(subject.display_date).to eq "3 days ago"
       end
