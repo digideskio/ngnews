@@ -10,4 +10,6 @@ class CategoriesRepository
       misc
     )
   end
+
+  delegate :include?, to: :all
 end

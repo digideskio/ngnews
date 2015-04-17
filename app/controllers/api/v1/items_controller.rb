@@ -8,8 +8,7 @@ module Api
       expose(:items_repository) { ItemsRepository.new }
 
       def create
-        item_attrs = params.require(:item).permit(:body, :source, :category)
-        create_item = Items::Create.new(items_repository, item_attrs).call
+        create_item = Items::Create.new(item_attrs).call
         json_response = if create_item.success?
                           create_item.data
                         else
@@ -20,6 +19,14 @@ module Api
 
       def index
         render json: items_repository.all
+      end
+
+      private
+
+      def item_attrs
+        params
+          .require(:item)
+          .permit(:body, :source, :category, :category, :sub_category)
       end
     end
   end
