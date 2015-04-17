@@ -9,8 +9,13 @@ module Api
 
       def create
         item_attrs = params.require(:item).permit(:body, :source, :category)
-        item = items_repository.add item_attrs
-        render json: item
+        create_item = Items::Create.new(items_repository, item_attrs).call
+        json_response = if create_item.success?
+                          create_item.data
+                        else
+                          { errors: create_item.errors }
+                        end
+        render json: json_response
       end
 
       def index
