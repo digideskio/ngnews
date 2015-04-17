@@ -2,8 +2,10 @@
   .container
     h2 add new item
     = simple_form_for item, defaults: { wrapper_html: { class: 'input-field' } } do |f|
-      = f.input :body, input_html: { class: 'materialize-textarea' }
-      = f.input :start_date, as: :string
-      = f.input :end_date, as: :string
-      = f.input :category, collection: categories
-      = f.submit 'Submit', class: 'waves-effect waves-light btn'
+      = f.input :body, input_html: { class: 'materialize-textarea' }, label: 'Body'
+      = label_tag :start_date
+      = date_field_tag 'item[start_date]', nil, class: 'datepicker'
+      = label_tag :end_date
+      = date_field_tag 'item[end_date]', nil, class: 'datepicker'
+      = select_tag 'item[category]', options_from_collection_for_select(categories, :to_s, :to_s), include_blank: true
+      = f.submit 'Submit', class: 'btn'
