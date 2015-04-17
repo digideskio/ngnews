@@ -2,8 +2,11 @@
   .container
     = form_tag root_path, method: :get do
       - categories.each do |category|
-        p
+        p.filter
           input type='checkbox' id="q_#{category}" name="q[#{category}]" checked="checked"
           label for="q_#{category}"
             = category
-      input.btn type='submit'
+
+      .center-align
+        button.btn-floating.btn-large type='submit' value=''
+          i.ss-search

@@ -27,3 +27,15 @@ $cart-text-line: 1.7em;
     }
   }
 }
+
+.filters {
+  p.filter {
+    display: inline;
+    padding: 10px;
+  }
+
+  button {
+    display: inline;
+  }
+}
+
