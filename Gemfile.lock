@@ -76,6 +76,8 @@ GEM
     debug_inspector (0.0.2)
     decent_exposure (2.3.2)
     diff-lcs (1.2.5)
+    easy_tokens (0.3.0)
+      rails (>= 4.0.0)
     erubis (2.7.0)
     eventmachine (1.0.7)
     execjs (2.5.2)
@@ -302,6 +304,7 @@ DEPENDENCIES
   coffee-rails
   database_cleaner
   decent_exposure
+  easy_tokens
   factory_girl_rails
   faker
   guard-bundler

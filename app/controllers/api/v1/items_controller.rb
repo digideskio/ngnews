@@ -2,6 +2,9 @@ module Api
   module V1
     class ItemsController < ApplicationController
       skip_before_action :verify_authenticity_token, only: :create
+
+      check_token_on :create, :index
+
       expose(:items_repository) { ItemsRepository.new }
 
       def create
