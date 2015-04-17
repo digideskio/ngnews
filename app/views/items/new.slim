@@ -1,0 +1,9 @@
+.row
+  .container
+    h2 add new item
+    = simple_form_for item do |f|
+      = f.input :body
+      = f.input :start_date, as: :text
+      = f.input :end_date, as: :text
+      = f.input :category, collection: categories
+      = f.submit

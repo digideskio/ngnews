@@ -7,5 +7,8 @@ Rails.application.routes.draw do
     end
   end
 
+  resources :settings, only: [:index]
+  resource :items, only: [:create]
+
   root 'home#index'
 end

@@ -11,7 +11,7 @@ module Items
 
     def call
       item = items_repository.add attrs
-      item.validate!
+      item.validate
       ItemCategoryValidator.new(item, categories_repository).validate!
       if item.errors.empty?
         Response::Success.new(data: item)
