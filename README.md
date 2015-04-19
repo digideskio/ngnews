@@ -1,50 +1,70 @@
-Ngnews
-================
+# Ngnews
 
-[![Deploy to Heroku](https://www.herokucdn.com/deploy/button.png)](https://heroku.com/deploy)
+[![](http://img.shields.io/codeclimate/github/netguru/ngnews.svg?style=flat-square)](https://codeclimate.com/github/netguru/ngnews)
+[![](http://img.shields.io/codeclimate/coverage/github/netguru/ngnews.svg?style=flat-square)](https://codeclimate.com/github/netguru/ngnews)
+[![](http://img.shields.io/gemnasium/netguru/ngnews.svg?style=flat-square)](https://gemnasium.com/netguru/ngnews)
 
-This application was generated with the [rails_apps_composer](https://github.com/RailsApps/rails_apps_composer) gem
-provided by the [RailsApps Project](http://railsapps.github.io/).
+Ngnews aka NG News is an app aggregating all the news happening in your company.
+You can store data like:
+* new team member
+* new article on your blog
+* new link added to company knowledge-base
+* event being held
+* some office changes, like buying new coffee machine
+* etc.
 
-Rails Composer is open source and supported by subscribers. Please join RailsApps to support development of Rails Composer.
+See [CHANGELOG][] for the latest changes in the app.
 
-Problems? Issues?
------------
+## Technologies
 
-Need help? Ask on Stack Overflow with the tag 'railsapps.'
+* Ruby on Rails 4.2
+* Ruby 2.2
+* Postgres
 
-Your application contains diagnostics in the README file. Please provide a copy of the README file when reporting any issues.
+## Setup
 
-If the application doesn't work as expected, please [report an issue](https://github.com/RailsApps/rails_apps_composer/issues)
-and include the diagnostics.
+Run the following command:
 
-Ruby on Rails
--------------
+```
+bin/setup
+```
 
-This application requires:
+## Development
 
-- Ruby 2.2.2
-- Rails 4.2.1
+### Guard
 
-Learn more about [Installing Rails](http://railsapps.github.io/installing-rails.html).
+Keep guard running at all times:
 
-Getting Started
----------------
+```
+bin/guard
+```
 
-Documentation and Support
--------------------------
+### Code Style
 
-Issues
--------------
+Please follow Ruby style guide available [here](https://github.com/bbatsov/ruby-style-guide).
 
-Similar Projects
-----------------
+Use `bin/guard` to have your development process be watched by an automated tool
+which checks your tests and code syntax. If you have any issues about the
+feedback provided by `rubocop`, please consult it with dev team and apply
+changes to `.rubocop.yml` file.
 
-Contributing
-------------
+## Tests
 
-Credits
--------
+We use RSpec 3.
 
-License
--------
+## Contributing
+
+If you make improvements to this application, please share with others.
+
+* Fork the project on GitHub.
+* Make your feature addition or bug fix.
+* Commit with Git.
+* Send the author a pull request.
+
+If you add functionality to this application, create an alternative
+implementation, or build an application that is similar, please contact
+me and I’ll add a note to the README so that others can find your work.
+
+## License
+
+MIT. See LICENSE.
