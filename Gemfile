@@ -19,6 +19,13 @@ gem 'thin'
 gem 'uglifier'
 gem 'draper'
 
+## deployment
+gem 'capistrano', '~> 3.2.1'
+gem 'capistrano-rails'
+gem 'capistrano-bundler'
+gem 'capistrano-passenger'
+gem 'rvm1-capistrano3', require: false
+
 group :development do
   gem 'better_errors'
   gem 'guard-bundler'
