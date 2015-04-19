@@ -13,7 +13,7 @@ You can store data like:
 * some office changes, like buying new coffee machine
 * etc.
 
-See [CHANGELOG.md][] for the latest changes in the app.
+See [CHANGELOG](https://github.com/netguru/ngnews/blob/master/CHANGELOG.md) for the latest changes in the app.
 
 ## Technologies
 
@@ -67,4 +67,4 @@ me and I’ll add a note to the README so that others can find your work.
 
 ## License
 
-MIT. See LICENSE.
+MIT. See [LICENSE](https://github.com/netguru/ngnews/blob/master/LICENSE).
