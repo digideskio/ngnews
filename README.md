@@ -13,6 +13,8 @@ You can store data like:
 * some office changes, like buying new coffee machine
 * etc.
 
+![ngnews](https://cloud.githubusercontent.com/assets/134795/7221226/f55b1c88-e6e2-11e4-8b01-bc7ed756a086.png)
+
 See [CHANGELOG](https://github.com/netguru/ngnews/blob/master/CHANGELOG.md) for the latest changes in the app.
 
 ## Technologies
