@@ -13,7 +13,7 @@ You can store data like:
 * some office changes, like buying new coffee machine
 * etc.
 
-See [CHANGELOG][] for the latest changes in the app.
+See [CHANGELOG.md][] for the latest changes in the app.
 
 ## Technologies
 
