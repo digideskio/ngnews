@@ -14,5 +14,15 @@ module Entities
         end
       end
     end
+
+    expose :icon do |item, options|
+      icons = CategoriesRepository.new.all
+      type = if item.category.in? icons
+        item.category
+      else
+        icons.sample
+      end
+      "https://netguru-news.herokuapp.com/images/#{type}.png"
+    end
   end
 end
