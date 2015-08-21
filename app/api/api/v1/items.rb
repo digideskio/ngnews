@@ -5,12 +5,14 @@ module API
 
       resource :items do
         params do
-          optional :categories, type: String, desc: 'Categories joined by a comma', default: ''
+          CategoriesRepository.new.all.map(&:to_sym).each do |cat|
+            optional cat, type: String, desc: "Filter by category #{cat}"
+          end
         end
 
         get do
-          p = declared(params)
-          present ItemsRepository.new.filter_by(p[:categories].split(',')), with: Entities::ItemEntity
+          categories = declared(params, include_missing: false).to_h
+          present ItemsRepository.new.filter_by(categories), with: Entities::ItemEntity
         end
       end
     end
