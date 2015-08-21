@@ -4,8 +4,13 @@ module API
       desc 'Fetch all items', entity: Entities::ItemEntity, is_array: true
 
       resource :items do
+        params do
+          optional :categories, type: String, desc: 'Categories joined by a comma', default: ''
+        end
+
         get do
-          present ItemsRepository.new.all, with: Entities::ItemEntity
+          p = declared(params)
+          present ItemsRepository.new.filter_by(p[:categories].split(',')), with: Entities::ItemEntity
         end
       end
     end
