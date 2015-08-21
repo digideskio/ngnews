@@ -3,6 +3,7 @@ module API
   class Base < Grape::API
     include API::Defaults
 
+    mount API::V1::Base
     add_swagger_documentation(
       mount_path: '/api-docs',
       base_path: '/api',
