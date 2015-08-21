@@ -18,6 +18,7 @@ gem 'simple_form'
 gem 'slim-rails'
 gem 'thin'
 gem 'uglifier'
+gem 'puma'
 
 ## deployment
 gem 'capistrano', '~> 3.2.1'
