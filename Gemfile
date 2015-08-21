@@ -26,6 +26,13 @@ gem 'capistrano-bundler'
 gem 'capistrano-passenger'
 gem 'rvm1-capistrano3', require: false
 
+## API
+gem 'grape'
+gem 'grape-entity'
+gem 'grape-swagger-rails'
+gem 'grape-swagger'
+gem 'hashie-forbidden_attributes' # needed to make grape params validation work
+
 group :development do
   gem 'better_errors'
   gem 'guard-bundler'
