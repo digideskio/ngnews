@@ -216,6 +216,7 @@ GEM
     pry-rescue (1.4.1)
       interception (>= 0.5)
       pry
+    puma (2.13.4)
     quiet_assets (1.1.0)
       railties (>= 3.1, < 5.0)
     rack (1.6.0)
@@ -402,6 +403,7 @@ DEPENDENCIES
   pg
   pry-rails
   pry-rescue
+  puma
   quiet_assets
   rails (= 4.2.1)
   rails_12factor
