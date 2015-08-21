@@ -1,0 +1,16 @@
+defaults: &defaults
+  email_provider_username: <%= ENV["SENDGRID_USERNAME"] %>
+  email_provider_password: <%= ENV["SENDGRID_PASSWORD"] %>
+
+development:
+  <<: *defaults
+  domain_name: example.com
+
+test:
+  <<: *defaults
+
+production:
+  <<: *defaults
+  domain_name: <%= ENV["DOMAIN_NAME"] %>
+  secret_key_base: <%= ENV["SECRET_KEY_BASE"] %>
+  secret_key_base: ENV["SECRET_KEY_BASE"]
