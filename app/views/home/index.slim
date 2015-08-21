@@ -9,4 +9,7 @@
       = render 'home/filters'
 
     .items
-      = render items, partial: 'items/item'
+      = react_component 'news/item_list', { items: items }
+
+    /.items
+      /= render items, partial: 'items/item'
