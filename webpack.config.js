@@ -5,6 +5,7 @@ module.exports = {
     path: __dirname + "/app/assets/javascripts/generated",
     filename: "bundle.js"
   },
+  watch: true,
   module: {
     loaders: [
       {
