@@ -33,6 +33,7 @@ gem 'grape-swagger-rails'
 gem 'grape-swagger'
 gem 'hashie-forbidden_attributes' # needed to make grape params validation work
 gem 'factory_girl_rails'
+gem 'faker'
 
 group :development do
   gem 'better_errors'
@@ -49,7 +50,6 @@ end
 
 group :development, :test do
   gem 'byebug'
-  gem 'faker'
   gem 'guard-rubocop'
   gem 'pry-rails'
   gem 'pry-rescue'
