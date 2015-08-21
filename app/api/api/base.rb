@@ -8,6 +8,7 @@ module API
       mount_path: '/api-docs',
       base_path: '/api',
       api_version: 'v1',
+      models: [Entities::ItemEntity],
       info: {
         contact: "ngnews@netguru.co",
         description: %Q(NG-news API documentation),
