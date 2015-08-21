@@ -20,6 +20,7 @@
     "lodash": "^3.10.1",
     "react": "^0.13.3",
     "react-chartjs": "^0.6.0",
+    "react-remarkable": "^1.1.1",
     "react-tools": "*",
     "webpack": "^1.10.5"
   },
@@ -31,4 +32,3 @@
     "node": ">= 0.10"
   }
 }
-
