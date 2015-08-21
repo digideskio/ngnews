@@ -1,6 +1,6 @@
 class HomeController < ApplicationController
   expose(:items_repository) { ItemsRepository.new }
-  expose(:items) { ItemDecorator.decorate_collection(items_repository.filter_by(query_params)) }
+  expose(:items) { ActiveModel::ArraySerializer.new(items_repository.filter_by(query_params)) }
   expose(:categories_repository) { CategoriesRepository.new }
   expose(:categories) { categories_repository.all }
 
