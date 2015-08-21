@@ -9,6 +9,7 @@ gem 'decent_exposure'
 gem 'draper'
 gem 'easy_tokens'
 gem 'jquery-rails'
+gem 'knock', '~> 1.2'
 gem 'materialize-sass'
 gem 'pg'
 gem 'redcarpet'
@@ -54,7 +55,7 @@ group :development, :test do
   gem 'pry-rails'
   gem 'pry-rescue'
   gem 'rspec-rails'
-  gem 'spring'
+  gem 'spring', '1.3.4'
   gem 'web-console', '~> 2.0'
 end
 
