@@ -10,4 +10,8 @@ class Item < ActiveRecord::Base
     end
   end
   # rubocop:enable Rails/FindEach
+
+  def is_event?
+    start_date.present? && end_date.present?
+  end
 end
