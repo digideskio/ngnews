@@ -27,6 +27,7 @@ db/*.sqlite3
 *.sassc
 .redcar/
 .sass-cache
+/config/config.yml
 /config/database.yml
 /coverage.data
 /coverage/
@@ -79,4 +80,3 @@ app/assets/javascripts/generated/*
 .env
 .powenv
 .ruby-version
-config/sec_config.yml
